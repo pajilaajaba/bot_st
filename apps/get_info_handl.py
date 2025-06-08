@@ -14,7 +14,7 @@ router = Router()
 
 @router.message(CommandStart())
 async def start_handle(message: Message):
-    await message.answer("Привет, выбери одну из предложенных ф-ций внизу👌⬇️", 
+    await message.answer("Привет, выбери одну из предложенных ф-ций внизу👀⬇️", 
                          reply_markup=kb.start_mess)
     
     
@@ -25,7 +25,7 @@ async def supp_handle(callback: CallbackQuery):
     
 @router.callback_query(F.data == 'back')
 async def back_to_menu(callback: CallbackQuery):
-    await callback. message.edit_text("Привет, выбери одну из предложенных ф-ций внизу👌⬇️", 
+    await callback. message.edit_text("Привет, выбери одну из предложенных ф-ций внизу👀⬇️", 
                          reply_markup=kb.start_mess)
     
     
